@@ -1,0 +1,872 @@
+:root{
+    --color--one:#00c7fc;
+    --color--tow:#4b4b4c;
+    --background:#1f2021;
+
+}
+
+/*global ruls*/
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-style: "open-sans";
+    margin:0 ;
+    padding: 0;
+
+   
+}
+/*contienr*/
+.conteiner{
+padding-left:15px ;
+padding-right: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+@media (min-width:768px) {
+ .conteiner{
+     width:750px
+ }   
+}
+@media (min-width:992px) {
+    .conteiner{
+        width:950px
+    }
+}
+@media (min-width:1200px) {
+    .conteiner{
+        width:1150px
+    }
+    
+}
+header{
+     width:100%;
+     height:100vh ;
+     background-color: #1f2021;
+     position: relative;
+}
+nav{
+    width:100%;
+    
+}
+header nav .conteiner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+header nav .conteiner::after{
+    content:"";
+    width:100%;
+    height:3px;
+    position: absolute;
+    left:0px;
+    bottom: 1px;
+   background:VAR(--color--tow);
+
+}
+
+header nav .conteiner .logo{
+    width: 200px;
+}
+header nav .conteiner .links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 30Px 15px;
+    position: relative;
+    transition: 1s all;
+    z-index: 2;
+}
+header nav .conteiner .links ul li::before{
+content: "";
+width:10px;
+height:2px;
+position: absolute;
+left:0;
+bottom:-1px ;
+background-color: var(--color--one);
+transition: 1s all;
+
+}
+header nav .conteiner .links  ul li:hover::before{
+    width: 100%;
+}
+header nav .conteiner .links ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color:azure;
+    transition: 1s all;
+
+}
+
+header nav .conteiner   .search{
+    font-size: 22px;
+    color: white;
+   
+   position: relative;
+   top:40%
+   
+}
+header nav .conteiner .links ul li a:hover,header nav .conteiner  ul li a:active{
+    cursor: grab;
+    color:#00c7fc;
+    }
+    header nav .conteiner  .list{
+      font-size: 24px;
+      color:white;
+   
+
+    }
+
+    /*start main*/
+    header .background{
+        width: 600px;
+        height:200px;
+        background-color:#0f748f;
+        position: absolute;
+        top:40%;
+        
+       z-index:1  
+    }
+    header .conteiner .content{
+        width: 400px;
+        width: 400px;
+         position: absolute;
+         top: 43%;
+         z-index: 2;
+        margin-left: 87px;
+        line-height: 27px;
+        margin-top: 8px;
+    }
+        header .conteiner .content h2{
+            font-size: 25px;
+            font-weight: 400;
+            color:white
+        }
+         header .conteiner .content p{
+            color: white;
+            font-size: 18px;
+         }
+         header i{
+            font-size:40px;
+            color: white;
+         }
+         header .angel1{
+                position: absolute;
+                top: 54%;
+                right: 12px
+         }
+         header .angel2{
+                position: absolute;
+                top: 54%;
+                left: 12px;
+                z-index: 2;
+         }
+         header .side{
+            position: absolute;
+            top: 96%;
+            left:49%
+            
+         }
+
+         header .side .row{
+            
+            border: solid 1px white;
+            width:10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            
+         }
+        
+    @media (min-width:768px){
+        header nav .conteiner  .list{
+            display:none;
+            
+            
+            
+        }
+       
+    }
+    @media (max-width:768px){
+    header nav .conteiner .links ul li{            
+           display:none ;
+        } 
+     header nav .conteiner   .search{
+            display: none;
+        
+        }
+        
+    header nav .conteiner  .list{
+           position: absolute;
+           right: 30px;  
+        }
+       
+    header .conteiner .content h2+p{
+   margin: 10px auto;
+       }
+    header .background{
+            width: 100%
+        }
+        
+    header .angel1,.angel2 {
+            display: none;
+        }
+    }
+    /*title and paragrf contnt*/
+    .contentsec .sect{
+        font-size: 80px;
+        font-weight: 800;
+        color:black;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+     .contentsec .secp{
+        font-size: 20px;
+        font-weight: 800;
+        color:silver;
+        margin-top: 10px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+     /*service styling*/
+.service{
+        width: 100%;
+        min-height: 60vh;
+        background-color: azure;
+     }
+     /*card style*/
+.service .conteiner .servbox .sbox{
+    display: flex;
+    
+     height:250px;
+  
+
+   
+ }
+ .service .conteiner .servbox .sbox i{
+    font-size:60px;
+    margin-top: 33px;
+    margin-left: 15px;
+    margin-right: 50px;
+    color:#1f2021
+
+ }
+ .service .conteiner .servbox .sbox .btext h1{
+    text-align: center;
+    color:var(--color--one);
+    margin-bottom: 30px;
+ }
+ .service .conteiner .servbox .sbox .btext p{
+    font-size: 18px;
+    color:silver;
+ }
+ @media (min-width:768px) {
+  .service .conteiner .servbox{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 10px;
+    
+  }
+ }   
+.pannel{
+  width: 100%;
+ min-height:70vh;
+  background-color: var(--background);  
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.pannel .phone{
+    margin-top: 54px;
+    width: 378px;
+  position: absolute;
+  right: 36%;
+}
+
+.pannel div{
+    width: 350px;
+    height: 200px;
+    background-color: var(--color--one);
+    position: absolute;
+    top: 103px;;
+    right: 0;
+    color:white;
+    padding-left: 30px;
+    
+}
+
+.pannel div .i p{
+   
+        display: flex;
+        margin-bottom:15px;
+}
+.pannel div .i i{
+    margin-right: 30px;
+}
+  @media (max-width:768px){
+    .pannel .phone{
+        display: none;
+    };
+    
+}
+/*portfolio part*/
+.porfolio{
+    width: 100%;
+}
+.porfolio .plink {
+    display: flex;
+    justify-content: center;
+}
+.porfolio .plink ul li{
+
+display:inline-block;
+margin-left: 10px;
+list-style: none;
+border: 1px solid transparent;
+border-radius:5px ;
+width: 100px;
+text-align: center;
+margin-top:10px;
+margin-bottom: 40px;
+transition: all 1s;
+}
+.porfolio .plink ul .all:active{
+    background-color: var(--color--one);
+}
+.porfolio .plink ul li a  {
+    font:18px;
+    text-decoration: none;
+    transition: all 1s;
+    color:black
+}
+.porfolio .plink ul li:hover{
+    background-color: var(--color--one);
+}
+.porfolio .plink ul li:hover a{
+    color:azure
+}
+.porfolio .portpic{
+    width: 100%;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr)) ;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+.porfolio .portpic .pic{
+    position: relative;
+    overflow: hidden; 
+}
+.porfolio .portpic .pic img{
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+
+}
+.porfolio .portpic .pic .cap{
+    background-image: linear-gradient(to left ,rgba(189, 185, 185, 0.7),rgba(189, 185, 185, 0.7) );
+    width: 75%;
+    text-align: center;
+    position: absolute;
+    bottom: -100px;
+    border-radius: 10px;
+    transition: all 1s;
+}
+.porfolio .portpic .pic:hover  .cap{
+     position: absolute;
+    bottom: 100px;
+}
+.porfolio .vediopanel{
+    width: 100%;
+    height: 60vh;
+    background-color: #0f748f;
+  
+    position: relative;
+    overflow: hidden;
+ 
+}
+.porfolio .vediopanel video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+    z-index: -1;
+   
+
+}
+.porfolio .vcontent{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    color:white;
+    text-align: center;
+    width: 100%;
+   
+    background-color:rgba(0, 199, 252,0.1)
+
+}
+.porfolio .vcontent button{
+    margin-top: 15px;
+    background-color: transparent;
+    width: 100px;
+    border: solid 1px black;
+    border-radius: 10px;
+    color: white;
+    transition: all 1s;
+    margin-bottom: 10px;
+}
+.porfolio .vcontent button:hover{
+background-color:var(--color--one) ;
+color:black
+}
+@media (max-width:768px) {
+
+    .porfolio .portpic .pic {
+     margin: auto;
+    }
+    .porfolio .vediopanel video{
+        transform: scale(1.3);
+    }
+}
+/*about style*/
+.about{
+    width: 100%;
+    min-height: 70vh;
+   
+   
+}
+.imgclass{
+ position: relative;
+ width: 100%;
+}
+.about .aboutimg{
+width: 500px;
+position: absolute;
+top:75%;
+left: 50%;
+transform: translate(-50% ,-50%);
+margin-top: 90px;
+
+}
+/*pannel part*/
+  .pannelcont{
+position: relative;
+width: 100%;
+min-height: 300px;
+background-color: #1f2021;
+margin-top: 0;
+display: grid;
+place-items: center;
+}
+
+ .pannelcont .conteiner .apannel{
+width: 100%;
+min-height: 150px;
+background-color: #096c89;
+display: flex;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+line-height: 25px;
+
+ }
+ .pannelcont .conteiner .apannel i{
+    font-size: 35px;
+    color: white;
+    padding-bottom: 18px;
+ }
+ .pannelcont .conteiner .apannel h3,p{
+    font-size: 25px;
+    color: white;
+    font-weight:700
+ }
+.pannelcont .conteiner .apannel p{
+    font-size:14px
+}
+@media (max-width:768px) {
+     .pannelcont .conteiner .apannel{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+     }
+    .pannelcont .conteiner.apannel .div{
+        margin:20px 0px
+    }
+}
+/*sekill n team part*/
+.ourskills{
+    display:flex ;
+    flex-basis: 50%;
+    column-gap: 20px;
+}
+.conteiner .team h3{
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+}
+.conteiner .team .teamp{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+ 
+}
+.conteiner .ourskills{
+    width: 100%;
+    min-height: 70vh;
+  
+}
+.conteiner .ourskills .tbox{
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+    margin: 30px;
+    width: 500px;
+    height: 150px;
+    box-shadow:  1px 1px 1px 1px rgba(0, 0, 0,0.2);
+    border-radius: 10px;
+}
+@media (max-width:768px) {
+    .conteiner .ourskills .team{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    
+    }
+        .conteiner .ourskills .team .tbox{
+        
+            width: 96%;
+        }
+    
+}
+
+
+
+.conteiner .ourskills .tbox img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.conteiner .ourskills .tbox .tcontnent p{
+color:black;
+margin-left: 30px;
+font-size: 18px;
+}
+.conteiner .ourskills .tbox .tcontnent .join{
+    text-align: end;
+    color: #4b4b4c;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.conteiner .ourskills .tbox .tcontnent{
+    position: relative;
+    width: calc(500px - 100px);
+}
+.conteiner .ourskills .tbox .tcontnent::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #00c7fc;
+    position: absolute;
+    left: 0%;
+    bottom:-60%;
+
+}
+/*skill part*/
+.skills h3{
+    font-size:30px;
+    text-align:center;
+    margin: 15px 0;
+}
+.skills .skillp{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    width: 350px;
+ }
+  .skills .skill .prog p{
+    color: black;
+    font-size: 18px;
+ text-transform: uppercase;
+ margin-bottom: 10px;
+  }
+ .skills .skill .prog .rank{
+    width:90%;
+    height: 25px;
+    background-color: #4b4b4c;
+margin: auto;
+ }
+  .skills .skill .prog{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+@media (max-width:768px) {
+    .ourskills{
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+
+    .skills{
+        width: 100%;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen (min-width:769px) and (max-width:992px){
+   .ourskill {
+    display: flex;
+    flex-basis: 100%;
+  }
+   .conteiner .ourskill .skills{
+   width: 100%;
+   }
+ 
+  
+    
+          
+}
+
+/*price part*/
+.price{
+    width: 100%;
+    min-height: 80vh;
+   
+}
+.price .pcont{
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr)) ;
+     
+}
+.price .pcont .pcard{
+     
+     width: 250px;
+     min-height: 400px;
+     text-align: center;
+     margin-bottom: 50px;
+}
+@media (max-width:768px) {
+    .price .pcont{
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+     .price .pcont .pcard{
+        margin-bottom: 80px;
+        width: 80%;
+     }
+   
+}
+.price .pcont .pcard p{
+    color: black;
+    font-size: 20px;
+
+}
+.price .pcont .pcard  .prx{
+    font-size: 70px;
+    font-weight:900 ;
+}
+.price .pcont .pcard .nprice{
+    margin:20px;
+    text-transform: uppercase;
+    position: relative;
+}
+.price .pcont .pcard .nprice::before{
+content: "";
+width:100%;
+height:1.5px;
+background-color: var(--color--one);
+position: absolute;
+top: -10%;
+left: 0%;
+}
+.price .pcont .pcard .nprice::after{
+content: "";
+width:100%;
+height:2px;
+background-color: var(--color--one);
+position: absolute;
+bottom: -5%;
+left: 0%;
+}
+
+.price .pcont .pcard .nprice sub{
+    margin-right: 80px;
+   font-size: 18px;
+    font-weight: 900;
+    color: #4b4b4c;
+}
+.price .pcont .pcard .nprice sup{
+      margin-left: 80px;
+      margin-top: 20px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #4b4b4c;
+}
+.price .pcont .featrue p,.l{
+    font-size: 18px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.price .pcont .featrue .l{
+    width:100% ;
+    
+}
+.price .pcont .featrue p::after{
+    content: "";
+width:100%;
+height:2px;
+background-color: var(--color--one);
+position: absolute;
+bottom: -80%;
+left: 0%;
+
+}
+.price .pcont .pcard button{
+margin-bottom:20px;
+width:100px;
+height:30px;
+border:1px solid var(--color--one);
+border-radius: 15px;
+
+}
+.price .pcont .pcard button a{
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    font-size: 17px;
+}
+.pricecontact{
+    display: grid;
+    place-items: center;
+}
+
+.pricecontact p{
+    color:black;
+    text-align: center;
+    font-size: 23px;
+    margin: 20px 0;
+}
+.pricecontact button{
+    width: 150px;
+    height:40px;
+   background-color: var(--color--one);
+   border: 1px solid transparent;
+   margin-bottom:50px ;
+ 
+
+
+}
+.pricecontact button a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+/*contact style*/
+.contactt{
+    width: 100%;
+}
+ .contactt .contactus{
+    display:flex;
+    justify-content: space-between;
+   
+ }
+.contactt .contactus form{
+
+ flex-basis: 70%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+}
+.contactt .contactus form .main{
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+      border: 1px solid rgb(123, 119, 119);
+    outline: none;
+    text-align: center;
+    transition: border 1s;
+}
+.contactt .contactus form .main:focus{
+    border-color: var(--color--one);
+}
+.contactt .contactus form  .text{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.contactt .contactus form  button{
+    width: 120px;
+    height: 40px;
+    background-color: var(--color--one);
+    margin-top: 80px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   border: none;
+   color:white;
+   text-transform: capitalize;
+}
+.contactt .contactus .info{
+    flex-basis: 25%;
+    margin-top:100px ;
+
+}
+.contactt .contactus .info h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.contactt .contactus .info p{
+    margin: 8px;
+    color:rgb(123, 119, 119) ;
+    font-size: 15px;
+    
+
+}
+.contactt .contactus .info address{
+     margin: 8px;
+    color:rgb(123, 119, 119) ;
+    font-size: 15px;
+    
+}
+@media (max-width:768px) {
+    .contactt .contactus{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .contactt .contactus .info{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contactt .contactus .info h3{
+     font-size: 30px;
+    }
+     .contactt .contactus .info p,address{
+        font-size:18px ;
+     }
+     .contactt .contactus .info address{
+        font-size:18px ;
+     }
+}
